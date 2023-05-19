@@ -1,0 +1,82 @@
+// ==================================== abstract ======================================
+
+// import variables 
+@import "abstracts/_variables";
+// import variables 
+// import mixins 
+@import "abstracts/_mixins.scss";
+// import mixins 
+// import placeholders 
+@import "abstracts/_placeholders.scss";
+// import placeholders 
+
+// ==================================== abstract/ ======================================
+
+// ==================================== base ======================================
+
+/* import reset */
+@import "base/_reset.scss";
+/* /import reset */
+
+// import fonts
+@import "base/_fonts.scss";
+// import fonts
+
+/* import common */
+@import "base/_common.scss";
+/* /import common */
+
+// ==================================== base/ ======================================
+
+// ==================================== components ======================================
+
+/* import logo */
+@import "components/_logo.scss";
+/* /import logo */
+
+/* import player */
+@import "components/_player.scss";
+/* /import player */
+
+/* import button */
+@import "components/_button.scss";
+/* /import button */
+
+// ==================================== components/ ======================================
+
+// ==================================== layout/ ======================================
+
+/* import header */
+@import "layout/_header.scss";
+/* /import header */
+
+/* import navigation */
+@import "layout/_navigation.scss";
+/* /import navigation */
+
+/* import footer */
+@import "layout/_footer.scss";
+/* /import footer */
+
+// ==================================== layout/ ======================================
+
+
+// ==================================== pages ======================================
+
+// ==================================== pages/ ======================================
+
+/* import about */
+@import "pages/_about.scss";
+/* /import about */
+
+/* import game */
+@import "pages/_game.scss";
+/* /import game */
+
+// ==================================== themes ======================================
+
+// ==================================== themes/ ======================================
+
+// ==================================== vendors ======================================
+
+// ==================================== vendors/ ======================================

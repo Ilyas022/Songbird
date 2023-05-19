@@ -1,0 +1,53 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Pacifico', coursive;
+  color: #bc33ff;
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 30px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.8;
+  }
+  @media (max-width: 550px) {
+    font-size: 16px;
+  }
+  // .header__container
+  &__container {
+    @include flex(flex-start);
+    position: relative;
+    z-index: 5;
+    @media (max-width: $mobile) {
+      justify-content: space-between;
+    }
+  }
+  // .header__logo
+  &__logo {
+    margin-right: 20%;
+    @media (max-width: $mobile) {
+      margin-right: 0;
+    }
+  }
+  // .header__menu
+  &__menu {
+    margin-right: auto;
+    @media (max-width: $mobile) {
+      margin-right: 0;
+    }
+  }
+  // .header__counter
+  &__counter {}
+}
+.score-counter {
+  // .score-counter__text
+  &__text {}
+  // .score-counter__score
+  &__score {}
+}

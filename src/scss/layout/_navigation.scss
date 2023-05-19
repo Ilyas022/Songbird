@@ -1,0 +1,23 @@
+.menu {
+  // .menu__list
+  &__list {
+    @include flex($gap: 30px);
+    @media (max-width: 630px) {
+      gap: 15px;
+    }
+    // @media (max-width: 400px) {
+    //   gap: 15px;
+    // }
+    @media (max-width: 370px) {
+      gap: 7px;
+    }
+  }
+  // .menu__link
+  &__link {}
+}
+.list {
+  // .list__item
+  &__item {}
+}
+.link {
+}

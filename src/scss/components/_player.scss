@@ -1,0 +1,59 @@
+.player {
+  display: flex;
+  gap: 20px;
+  // .player__play-button
+  &__play-button {}
+  // .player__body
+  &__body {
+    flex: 1 0 auto;
+  }
+  // .player__timebar
+  &__timebar {}
+}
+.play-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.timebar {
+  display: flex;
+}
+.player-time {
+  display: flex;
+  justify-content: space-between;
+  // .player-time__current
+  &__current {}
+  // .player-time__total
+  &__total {}
+}
+.current-time {
+}
+.total-time {
+}
+
+.timebar__inner {
+  flex: 1 0 auto;
+}
+#timebar {
+  width: 100%;
+}
+#volbar {
+  transform: rotate(270deg)
+             translateX(60px);
+   @media (max-width: $mobile) {
+    width: 100px;
+    transform: rotate(270deg)
+             translateX(48px);
+  }
+   @media (max-width: 550px) {
+    width: 80px;
+    transform: rotate(270deg)
+             translateX(40px);
+  }
+   @media (max-width: 500px) {
+    width: 60px;
+    transform: rotate(270deg)
+             translateX(27px);
+  }
+}
