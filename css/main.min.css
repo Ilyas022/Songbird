@@ -1,0 +1,900 @@
+.bird-content__voices-wrapper,
+.bird-content__description-wrapper {
+  flex: 1 1 50%;
+}
+
+/* import reset */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside, main {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+* a, * button {
+  color: inherit;
+}
+
+/* /import reset */
+@font-face {
+  font-family: Aleo-bold-italic;
+  font-display: swap;
+  src: url("../fonts/Aleo-BoldItalic.woff2") format("woff2"), url("../fonts/Aleo-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Aleo-regular-italic;
+  font-display: swap;
+  src: url("../fonts/Aleo-Italic.woff2") format("woff2"), url("../fonts/Aleo-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Aleo-regular;
+  font-display: swap;
+  src: url("../fonts/Aleo-Regular.woff2") format("woff2"), url("../fonts/Aleo-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Aleo-bold;
+  font-display: swap;
+  src: url("../fonts/Aleo-Bold.woff2") format("woff2"), url("../fonts/Aleo-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Magra-bold;
+  font-display: swap;
+  src: url("../fonts/Magra-Bold.woff2") format("woff2"), url("../fonts/Magra-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: RedHatText-medium;
+  font-display: swap;
+  src: url("../fonts/RedHatText-Medium.woff2") format("woff2"), url("../fonts/RedHatText-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: RedHatText-regular;
+  font-display: swap;
+  src: url("../fonts/RedHatText-Regular.woff2") format("woff2"), url("../fonts/RedHatText-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* import common */
+html {
+  color: #fff;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-image: url(./../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+._container {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+._ibg {
+  position: relative;
+  min-width: 400px;
+  min-height: 250px;
+}
+@media (max-width: 991.98px) {
+  ._ibg {
+    min-height: 0;
+    min-width: 0;
+    flex: 1 0 30%;
+    width: 150px;
+  }
+}
+@media (max-width: 479.98px) {
+  ._ibg {
+    width: 155px;
+    height: 130px;
+    flex: 1 0 auto;
+  }
+}
+
+._ibg img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.text {
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.title {
+  font-size: 64px;
+}
+
+.sub-title {
+  font-size: 62px;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+/* /import common */
+/* import logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.logo__img {
+  width: 64px;
+  height: 64px;
+}
+@media (max-width: 550px) {
+  .logo__img {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 430px) {
+  .logo__text {
+    display: none;
+  }
+}
+
+/* /import logo */
+/* import player */
+.player {
+  display: flex;
+  gap: 20px;
+}
+.player__body {
+  flex: 1 0 auto;
+}
+.play-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.timebar {
+  display: flex;
+}
+
+.player-time {
+  display: flex;
+  justify-content: space-between;
+}
+.timebar__inner {
+  flex: 1 0 auto;
+}
+
+#timebar {
+  width: 100%;
+}
+
+#volbar {
+  transform: rotate(270deg) translateX(60px);
+}
+@media (max-width: 767.98px) {
+  #volbar {
+    width: 100px;
+    transform: rotate(270deg) translateX(48px);
+  }
+}
+@media (max-width: 550px) {
+  #volbar {
+    width: 80px;
+    transform: rotate(270deg) translateX(40px);
+  }
+}
+@media (max-width: 500px) {
+  #volbar {
+    width: 60px;
+    transform: rotate(270deg) translateX(27px);
+  }
+}
+
+/* /import player */
+/* import button */
+.button {
+  width: 100%;
+  padding: 10px 15px;
+  position: relative;
+  z-index: 5;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(70, 136, 180, 0.6);
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  opacity: 0.5;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+.button:hover::after {
+  background-color: #69a0c4;
+}
+.button.inactive:hover::after {
+  background-color: rgba(221, 30, 30, 0.5019607843);
+}
+.button__text {
+  position: relative;
+  z-index: 5;
+  background-color: red;
+}
+
+.inactive {
+  background-color: rgba(176, 24, 24, 0.5);
+}
+
+.lang-button {
+  background-color: transparent;
+  font-size: 24px;
+  margin-right: 20px;
+}
+@media (max-width: 640px) {
+  .lang-button {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .lang-button {
+    font-size: 16px;
+  }
+}
+
+.lang-button_active {
+  color: green;
+}
+
+/* /import button */
+/* import header */
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Pacifico", coursive;
+  color: #bc33ff;
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+@media (max-width: 550px) {
+  .header {
+    font-size: 16px;
+  }
+}
+.header__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: normal;
+  position: relative;
+  z-index: 5;
+}
+@media (max-width: 767.98px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  margin-right: 20%;
+}
+@media (max-width: 767.98px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}
+.header__menu {
+  margin-right: auto;
+}
+@media (max-width: 767.98px) {
+  .header__menu {
+    margin-right: 0;
+  }
+}
+/* /import header */
+/* import navigation */
+.menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 630px) {
+  .menu__list {
+    gap: 15px;
+  }
+}
+@media (max-width: 370px) {
+  .menu__list {
+    gap: 7px;
+  }
+}
+/* /import navigation */
+/* import footer */
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Pacifico", coursive;
+  color: #bc33ff;
+  font-size: 24px;
+  position: relative;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: normal;
+  position: relative;
+  z-index: 5;
+}
+.footer__menu {
+  margin-right: auto;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 430px) {
+  .footer__socials {
+    gap: 10px;
+  }
+}
+
+.socials__icon {
+  height: 50px;
+  width: 50px;
+}
+
+.rs-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* /import footer */
+/* import about */
+.main {
+  margin-bottom: 40px;
+}
+.main > *:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.story {
+  font-family: "Manrope", sans-serif;
+}
+.greeting__body {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.greeting__body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3776a1;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.greeting-text {
+  padding: 30px;
+  flex: 1 1 70%;
+}
+@media (max-width: 740px) {
+  .greeting-text {
+    padding: 0;
+  }
+}
+.greeting-text > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media (max-width: 740px) {
+  .greeting-text__title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 740px) {
+  .greeting-text__pres {
+    font-size: 20px;
+  }
+}
+
+.greeting-image {
+  flex: 0 1 30%;
+}
+@media (max-width: 800px) {
+  .greeting-image {
+    flex-basis: 35%;
+  }
+}
+@media (max-width: 600px) {
+  .greeting-image {
+    display: none;
+  }
+}
+.greeting-image__img {
+  width: 100%;
+}
+
+@media (max-width: 740px) {
+  .birds-gallery__title {
+    font-size: 48px;
+  }
+}
+
+.gallery {
+  display: flex;
+  row-gap: 19px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery-card {
+  flex: 0 1 32%;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .gallery-card {
+    flex-basis: 49%;
+  }
+}
+@media (max-width: 500px) {
+  .gallery-card {
+    flex-basis: 100%;
+  }
+}
+.gallery-card::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3776a1;
+  opacity: 0.5;
+  z-index: -1;
+}
+.gallery-card > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.gallery-card:hover .gallery-card__hover {
+  transform: translateY(0);
+  opacity: 1;
+}
+.gallery-card__image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gallery-card__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .gallery-card__img {
+    height: 250px;
+  }
+}
+@media (max-width: 650px) {
+  .gallery-card__img {
+    height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .gallery-card__img {
+    height: 300px;
+  }
+}
+.gallery-card__name {
+  font-size: 30px;
+}
+.gallery-card__species {
+  font-size: 20px;
+}
+.gallery-card__description {
+  font-size: 16px;
+  line-height: 120%;
+}
+.gallery-card__hover {
+  padding: 35px;
+  text-align: justify;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.4s;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.gallery-card__hover::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(99, 89, 89);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.about-play-button {
+  width: 100%;
+  padding: 5px;
+  background-color: red;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* /import about */
+/* import game */
+.quiz {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.quiz-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+.quiz-type__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "Pacifico", coursive;
+  color: #c7aad5;
+  padding: 8px 12px;
+  flex: 1 1 16%;
+  text-align: center;
+  white-space: nowrap;
+  background-color: rgba(55, 118, 161, 0.5);
+}
+
+.quiz-type_active {
+  background-color: #7512a5;
+}
+
+.bird-info {
+  position: relative;
+  z-index: 5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.bird-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3776a1;
+  opacity: 0.5;
+}
+.bird-info__wrapper {
+  display: flex;
+  justify-content: normal;
+  align-items: normal;
+  gap: 2.5%;
+  position: relative;
+  z-index: 5;
+  padding: 30px;
+}
+@media (max-width: 767.98px) {
+  .bird-info__wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .bird-info__picture {
+    align-self: center;
+  }
+}
+.bird-info__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  gap: normal;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.bird-info__name {
+  margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  .bird-info__name {
+    align-self: center;
+  }
+}
+.bird-picture {
+  width: 200px;
+  height: 155px;
+  background-color: lightpink;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.bird-picture__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+}
+
+.bird-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 1100px) {
+  .bird-content {
+    flex-direction: column;
+  }
+}
+
+.bird-content__voices-wrapper,
+.bird-content__description-wrapper {
+  padding: 30px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.bird-content__voices-wrapper::before,
+.bird-content__description-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #3776a1;
+  opacity: 0.5;
+}
+
+.bird-description__species {
+  flex: 1 0 100%;
+}
+
+.voices,
+.description {
+  position: relative;
+  z-index: 5;
+}
+
+.voices > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+.voices-item {
+  padding: 15px 20px;
+  position: relative;
+}
+.voices-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  background-color: #4688b4;
+  border-radius: 10px;
+  z-index: -1;
+  transition: background-color 0.3s;
+}
+.voices-item:hover::before {
+  background-color: #69a0c4;
+}
+.voices-item:hover {
+  cursor: pointer;
+}
+.voices-item__icon {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.voices-item__icon_right {
+  background-color: #13ba13;
+  border: 0px;
+}
+.voices-item__icon_wrong {
+  background-color: #9d0000;
+  border: 0px;
+}
+
+.bird-win {
+  position: relative;
+  z-index: 5;
+  padding: 64px 32px;
+}
+.bird-win::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-color: #3776a1;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -1;
+}
+.bird-win__text {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.bird-win__title {
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .bird-win__title {
+    font-size: 32px;
+  }
+}
+.bird-win__button {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.coll {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.coll > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* /import game */

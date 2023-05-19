@@ -1,6 +1,0 @@
-@mixin flex($mainAxis: center, $crossAxis: center, $gap: normal) {
-  display: flex;
-  justify-content: $mainAxis;
-  align-items: $crossAxis;
-  gap: $gap
-}
